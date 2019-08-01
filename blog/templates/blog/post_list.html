@@ -10,18 +10,14 @@
 		<h1><a href="/">Mój fantastyczny Blog</a></h1>
 	</div>
 
+	{% for post in posts %}
 	<div>
-		<p>published: 31.07.2019</p>
-		<h2><a href="">Mój pierwszy post</a></h2>
-		<p>If you're looking for a new, weird thing to do with your next phone, consider hands-free use. Google's upcoming Pixel 4 is going to throw a hands-free twist to its front-camera array: In addition to facial recognition, it'll sense motion and hand gestures. </p>
+		<p>published: {{ post.published_date }}</p>
+		<h2><a href="">{{ post.title }}</a></h2>	
+		<p>{{ post.text|linebreaksbr }}</p>
 	</div>
+	{%endfor%}
 	
-	<div>
-		<p>published: 31.07.2019</p>
-		<h2><a href="">Mój drugi post</a></h2>
-		<p>This technology, originally called Project Soli, uses radar to detect 3D movement in space. And that's in addition to adding new face-scanning infrared camera tech similar to Apple's iPhone X Face ID. Google's Soli tech was FCC approved earlier this year, and was expected in the Pixel 4 before Google confirmed it.</p>
-	</div>
-
 </body>
 
 </html>
